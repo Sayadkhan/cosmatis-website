@@ -3,7 +3,7 @@
 :root {
   --color-primary: #ff3b0a;
   --color-primary-variant: #5ddce5;
-  --color-bg-1:#001517;
+  --color-bg-1:#b42875;
   --color-bg-2:#000000;
   --color-bg-3:#010b0c;
   --color-gray: #98a4b3;
@@ -18,20 +18,22 @@
 --transition: all 0.3s ease-in-out;
 }
 
-*{
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  border: 0;
+  border: none;
   outline: 0;
   list-style: none;
-  text-decoration: none;
-}
+  text-decoration: none;}
+
 
 body {
   font-family: 'Poppins', sans-serif;
   background-color: var(--color-bg-3);
-  color: var(--color-light);
+  color: var(--color-whit);
   line-height: 1.8;
   overflow-x: hidden;
 
@@ -240,6 +242,7 @@ nav{
   display: grid;
   grid-template-columns: 43% 53%;
   gap: 4%;
+  margin-top: 5rem;
 }
 .about-left {
   position: relative;
@@ -262,27 +265,148 @@ nav{
 
 .about-right {
   width: 30rem;
-  margin: 33rem auto;
+  margin-top: 33rem;
+  margin-left: auto;
   text-align: justify;
 }
+
+.about-right h2 {
+  color: var(--color-bg-1);
+}
+
+/* ===============Browser-items======================== */
+
+.Browser-items{
+  margin-top: 5rem;
+}
+
+
+.Browser-items h2 {
+  font-size: 3rem;
+}
+
 
 .browser-card{
 
     width: 20rem;
-    height: max-content;
+    height: fit-content;
     border-radius: 10px;
     box-shadow: 5px 5px 10px rgb(0, 0, 0), -5px -5px 10px rgb(27, 27, 27);
     padding: 1rem;
+    overflow: hidden;
     
 }
 
-.card-deatils h2 {
+.card-image{
+  overflow: hidden;
+}
+
+.card-deatils h4 {
   text-transform: uppercase;
   text-align: center;
+  font-size: 1.3rem;
+  padding: 1rem;
   
 }
 
+.card-deatils p {
+  text-align: justify;
+}
+
+
 .browsers-card {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 3.5rem;
+}
+/* ==================contact=================== */
+
+.contact-container {
+  display: grid;
+  grid-template-columns: 53% 43%;
+  gap: 4%;
+  margin-top: 8rem;
+}
+
+.contact-right {
+  position: relative;
+}
+
+.contact-image-1st{
+  width: 50rem;
+  position: absolute;
+  margin-top: 13rem;
+  right: 5rem;
+}
+.contact-image-2nd{
+  width: 45rem;
+  position: absolute;
+  top: 2rem;
+  left: -54rem;
+  
+}
+
+.contact-left {
+  width: 30rem;
+  margin-top: 33rem;
+  margin-right: auto;
+  text-align: justify;
+}
+
+.box-2 {
+  background-color: #ff3b0a;
+  width: 100vh;
+  /* margin-top: rem; */
+  margin-left: 30rem;
+  margin-bottom: 10rem;
+  border-radius: 30px;
+  /* position: absolute; */
+  height: 16rem;
+  align-items: center;
+  padding: 3rem 5rem;
+}
+/* ================sing-in-box================== */
+
+.sign-up {
+  background-color: var(--color-light);
+  border-radius: 1rem;
+  padding: .5rem;
+}
+
+
+.sign-up input[type="search"] {
+  background-color: var(--color-light);
+  width: 30vw;
+  margin-left: 5rem;
+  font-size: 0.9rem;
+  color: var(--color-bg-3);
+  font-family: inherit;
+}
+
+.sign-up input[type="search"]::placeholder {
+  color: var(--color-gray);
+}
+
+button {
+  border-radius: 2rem;
+  background-color: #010b0c;
+  
+}
+.box-2-text  {
+font-size: 1.5rem;
+margin-bottom: 0.5rem;
+
+}
+
+
+footer {
+
+  width: 100vw;
+  background-color: #1b1c1f;
   display: flex;
-  justify-content: space-around;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5rem;
+  border-radius: 2rem;
 }
